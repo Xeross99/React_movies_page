@@ -1,25 +1,49 @@
 import React from 'react';
 import styles from './HomePage.module.css';
-import axios from 'axios';
 import { useFetch } from '../../hooks/useFetch';
+import { Link } from 'react-router-dom'
+import MovieCard from '../../components/MovieCard/MovieCard';
 
 const HomePage = () => {
 
   const nowPlaying = useFetch("movie/now_playing");
   const popular = useFetch("movie/popular");
+  const upcoming = useFetch("movie/upcoming");
 
-  console.log(popular.data);
-  console.log(nowPlaying.data);
+  const bannerMovie = nowPlaying.data[0];
+  if (!bannerMovie) return;
+  const bannerImage = `https://image.tmdb.org/t/p/original/${bannerMovie.poster_path}`
+
 
   return (
     <div>
-    {nowPlaying.loading ? "Wczytywanie" : "Filmy 1 som"}
-    {popular.loading ? "Wczytywanie" : "Filmy 2 som"}
-    
-    <div classname={styles.buttons}>
-      
-    </div>
-  
+      <div style={{ backgroundImage: `url(${bannerImage})` }} className={styles.banner}>
+
+        <h1 className={styles.title}>{bannerMovie.title}</h1>
+        <Link to="/" className={styles.link}>Oglądaj</Link>
+      </div>
+
+
+      <section>
+        <h2>Najpopularniejsze</h2>
+
+        <div className={styles.container}>
+          {popular.data.map((movie) => <MovieCard key={movie.id} movies={movie}/>)}
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Nadchodzące</h2>
+
+        <div className={styles.container}>
+          {upcoming.data.map((movie) => <MovieCard key={movie.id} movies={movie}/>)}
+        </div>
+
+      </section>
+
+
+
     </div>
   )
 }
