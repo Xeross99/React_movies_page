@@ -1,18 +1,15 @@
 .container {
     width: 200px;
-    height: 350px;
+    height: 380px;
     position: relative;
-    -webkit-box-shadow: 4px 4px 1px 0px #F5D7DB;
-    -moz-box-shadow: 4px 4px 1px 0px #F5D7DB;
-    box-shadow: 4px 4px 1px 0px #F5D7DB;
+    -webkit-box-shadow: 4px 4px 20px -7px rgba(135, 57, 249, 1);
+    -moz-box-shadow: 4px 4px 20px -7px rgba(135, 57, 249, 1);
+    box-shadow: 4px 4px 20px -7px rgba(135, 57, 249, 1);
     border-radius: 10px;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 .container:hover {
-    -webkit-box-shadow: 10px 10px 10px 0px #F5D7DB;
-    -moz-box-shadow: 10px 10px 10px 0px #F5D7DB;
-    box-shadow: 10px 10px 10px 0px #F5D7DB;
     border-radius: 10px;
     scale: 1.04;
 }
@@ -61,5 +58,8 @@
     border-radius: 10px;
     opacity: 0;
     transition: 0.2s;
-    border: 2px solid #F5D7DB;
+    border: 2px solid #8739F9;
+    -webkit-box-shadow: inset 0px 0px 10px 0px rgba(135, 57, 249, 1);
+    -moz-box-shadow: inset 0px 0px 10px 0px rgba(135, 57, 249, 1);
+    box-shadow: inset 0px 0px 10px 0px rgba(135, 57, 249, 1);
 }

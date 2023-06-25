@@ -14,9 +14,10 @@ export const useFetch = (endpoint) => {
         (
             async () => {
                 try {
-                    setLoading(true)
-                    const response = await axios.get(URL)
-                    setData(response.data.results.slice(0,5))
+                    setLoading(true);
+                    const response = await axios.get(URL);
+                    const data = response.data.results ? response.data.results.slice(0,10) : response.data
+                    setData(data);
                 } catch (error) {
                     setError(error)
                 } finally {

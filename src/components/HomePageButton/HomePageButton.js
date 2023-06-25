@@ -5,11 +5,9 @@ import styles from './HomePageButton.module.css'
 
 const HomePageButton = () => {
     return (
-        <div className={styles.container}>
-
-            <Link to="/">Strona główna</Link>
-
-        </div>
+        <Link to="/" className={styles.button}>
+        back
+        </Link>
     )
 }
 

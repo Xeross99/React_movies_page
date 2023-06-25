@@ -1,0 +1,13 @@
+.container h5 {
+    font-size: 30px;
+    color: white;
+}
+.container img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.container p {
+    margin-top: 15px;
+}

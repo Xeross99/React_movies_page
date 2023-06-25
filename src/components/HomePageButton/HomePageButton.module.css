@@ -1,0 +1,38 @@
+.button {
+    width: 140px;
+    height: 40px;
+    padding: 8px;
+    background-color: #8739F9;
+    transition: 0.3s;
+    border-radius: 20px;
+    margin-top: 14px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+    scale: 1.1;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+}

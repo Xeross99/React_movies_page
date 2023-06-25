@@ -14,18 +14,20 @@ const HomePage = () => {
   if (!bannerMovie) return;
   const bannerImage = `https://image.tmdb.org/t/p/original/${bannerMovie.poster_path}`
 
+console.log(bannerMovie)
 
   return (
     <div>
       <div style={{ backgroundImage: `url(${bannerImage})` }} className={styles.banner}>
 
         <h1 className={styles.title}>{bannerMovie.title}</h1>
-        <Link to="/" className={styles.link}>Oglądaj</Link>
+        <p>&emsp;{bannerMovie.overview}</p>
+        <Link to={`/movie/${bannerMovie.id}`} className={styles.link}>Watch</Link>
       </div>
 
 
       <section>
-        <h2>Najpopularniejsze</h2>
+        <h2>Popular</h2>
 
         <div className={styles.container}>
           {popular.data.map((movie) => <MovieCard key={movie.id} movies={movie}/>)}
@@ -34,7 +36,7 @@ const HomePage = () => {
       </section>
 
       <section>
-        <h2>Nadchodzące</h2>
+        <h2>Upcoming</h2>
 
         <div className={styles.container}>
           {upcoming.data.map((movie) => <MovieCard key={movie.id} movies={movie}/>)}

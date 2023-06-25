@@ -2,26 +2,37 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 250px;
-    max-width: 1200px;
-    width: 90%;
-    height: 350px;
-    margin: 30px auto;
-    border-radius: 20px;
+    height: 700px;
+    margin: 0px auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 40px;
+    -webkit-box-shadow: inset 0px -140px 72px -20px rgba(16, 15, 16, 1);
+    -moz-box-shadow: inset 0px -140px 72px -20px rgba(16, 15, 16, 1);
+    box-shadow: inset 0px -140px 72px -20px rgba(16, 15, 16, 1);
 }
+
+.banner h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
 .title {
     font-size: 5rem;
     color: white;
 }
 
 .link {
-    background-color: #F1916D;
-    max-width: 180px;
+    background-color: #8739F9;
+    width: 140px;
+    height: 40px;
     padding: 8px;
     border-radius: 20px;
     margin-top: 14px;
@@ -29,6 +40,14 @@
     text-align: center;
     text-decoration: none;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.link:hover {
+    scale: 1.1;
 }
 
 section {
@@ -46,7 +65,24 @@ section h2 {
 .container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    gap: 50px;
+    gap: 40px;
     justify-content: center;
+    height: 450px;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+    padding: 0px 20px;
+    background-color: #42445a5b;
+    -webkit-box-shadow: inset 0px 0px 50px 30px rgba(16, 15, 16, 1);
+    -moz-box-shadow: inset 0px 0px 50px 30px rgba(16, 15, 16, 1);
+    box-shadow: inset 0px 0px 50px 30px rgba(16, 15, 16, 1);
+}
+
+.banner p,
+h1 {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    color: white;
+    margin: 10px;
 }
